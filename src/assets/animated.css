@@ -1,0 +1,304 @@
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.onStep {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.css-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  background: #000;
+}
+
+.cssLoader17 {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+}
+.cssLoader17:before, .cssLoader17:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+.cssLoader17:before {
+  animation: before 2s infinite;
+}
+.cssLoader17:after {
+  animation: after 2s infinite;
+}
+
+@keyframes before {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+}
+@keyframes after {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+}
+
+.reverse-spinner {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 4px solid transparent;
+  border-top-color: #1976d2;
+  border-left-color: #1976d2;
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+.reverse-spinner::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  content: "";
+  border: 4px solid transparent;
+  border-top-color: #03a9f4;
+  border-left-color: #03a9f4;
+  border-radius: 50%;
+  -webkit-animation: spinBack 1s linear infinite;
+  animation: spinBack 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes spinBack {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(-720deg);
+      transform: rotate(-720deg);
+  }
+}
+
+@keyframes spinBack {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(-720deg);
+      transform: rotate(-720deg);
+  }
+}
+
+.trade-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+  border-radius: 14px;
+}
+
+.nb-spinner {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border-top: 4px solid #03A9F4;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: 1s nb-spinner linear infinite;
+  animation: 1s nb-spinner linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+  
+@-webkit-keyframes nb-spinner {
+  from {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+        
+@keyframes nb-spinner {
+  from {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.react-loading-skeleton {
+  background-color: #2a2b2c !important;
+  background-image: linear-gradient(90deg ,#2a2b2c,#444,#2a2b2c ) !important;
+}
+
+.ratio-1-1 {
+  aspect-ratio: 1;
+}
+
+.premium-nft {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 25px !important;
+  color: turquoise;
+  width: 25px;
+  height: 25px;
+}
+
+.owner-check {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 25px !important;
+  color: turquoise;
+}
+
+.bid-check {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 25px !important;
+  color: turquoise;
+  width: 25px;
+  height: 25px;
+}
+
+.f-12px {
+  font-size: 12px;
+}
+
+.w-50px {
+  width: 50px !important;
+}
+
+.bid-loading {
+  display: flex;
+  align-items: center;
+  border: 1px solid #2a2b2c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bid-loading .nft-name{
+  width: 200px;
+}
+
+.loading-status {
+  position: absolute;
+  top: 50%;
+  margin-top: 35px;
+  width: 100%;
+  text-align: center;
+  color: #03A9F4;
+}
+
+.verify-panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #03A9F4;
+}
+
+.bg-dark-transparent {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-apply, .btn-green {
+  background: #3fb737 !important;
+}
+
+.btn-apply:hover, .btn-green:hover {
+  box-shadow: 2px 2px 20px 0px #3fb737 !important;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
+}
